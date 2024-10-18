@@ -1,0 +1,21 @@
+{
+    "name": "Varauksen hakija",
+    "version": "1.1",
+    "description": "Lisää varauskalenteriin varauksen hakutoiminnon. Paina hiiren oikeaa painiketta vuoron kohdalla ja valitse 'Hae varaus'.",
+    "permissions": ["contextMenus", "activeTab", "tabs", "https://www.tuni.fi/sportuni/*"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.tuni.fi/sportuni/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": ["search.js"],
+    "manifest_version": 2,
+    "icons": {
+      "128": "icon.png"
+    }
+  }
